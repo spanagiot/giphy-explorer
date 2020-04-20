@@ -7,6 +7,9 @@ class GifList extends React.Component {
     const deleteClicked = (key) => {
       this.props.onDeleteClicked(key);
     };
+    if (!this.props.data) {
+      return null;
+    }
     const elementsToRender = this.props.data.map((x, i) => {
       return (
         <GifElement
