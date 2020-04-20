@@ -12,7 +12,7 @@ class App extends React.Component {
       search: false,
       trending: false,
       GIFtotalCount: 0,
-      GIFperPage: 25,
+      GIFperPage: 24,
       searchTerm: '',
     };
     this.apiKey = 'dc6zaTOxFJmzC'; // demo api key
