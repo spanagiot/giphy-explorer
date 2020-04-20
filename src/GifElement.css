@@ -3,7 +3,7 @@
 }
 
 .element-buttons {
-  opacity: 0%;
+  visibility: hidden;
 }
 
 .list-element {
@@ -16,18 +16,17 @@
   align-items: center;
 }
 
-.list-element:hover > .element-buttons {
+.list-element:hover .element-buttons {
+  visibility: visible;
   animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes slide-bottom {
   0% {
     transform: translateY(0);
-    opacity: 0%;
   }
 
   100% {
     transform: translateY(10px);
-    opacity: 100%;
   }
 }
