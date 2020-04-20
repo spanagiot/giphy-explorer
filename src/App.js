@@ -38,10 +38,13 @@ class App extends React.Component {
       .then((res) => res.json())
       .then((x) => {
         const currentList = [...this.state.gifList, ...x.data];
-        this.setState({
-          gifList: currentList,
-          GIFtotalCount: x.pagination.total_count,
-        });
+        this.setState(
+          {
+            gifList: currentList,
+            GIFtotalCount: x.pagination.total_count,
+          },
+          this.storeStateInSessionStorage
+        );
       })
       .catch((x) => {
         alert('Error occured');
@@ -85,7 +88,7 @@ class App extends React.Component {
           search: false,
           GIFtotalCount: 0,
         },
-        this.fetch
+        this.storeStateInSessionStorage
       );
     };
 
@@ -107,7 +110,7 @@ class App extends React.Component {
           page: previousPage,
           gifList: [],
         },
-        this.fetch
+        this.fetch()
       );
     };
 
@@ -131,6 +134,7 @@ class App extends React.Component {
             onSearch={search}
             onFetchTrending={fetchTrending}
             onClear={clear}
+            searchTerm={this.state.searchTerm}
           ></SearchBar>
           <div className="mt-10">Powered By GIPHY</div>
           <div className="flex-item">
@@ -151,6 +155,26 @@ class App extends React.Component {
         </div>
       </div>
     );
+  }
+
+  storeStateInSessionStorage() {
+    for (let stateKey in this.state) {
+      sessionStorage.setItem(stateKey, JSON.stringify(this.state[stateKey]));
+    }
+  }
+
+  loadStateFromSessionStorage() {
+    const savedState = this.state;
+    for (let stateKey in this.state) {
+      if (sessionStorage.getItem(stateKey) !== null) {
+        savedState[stateKey] = JSON.parse(sessionStorage.getItem(stateKey));
+      }
+    }
+    this.setState({ ...savedState });
+  }
+
+  componentDidMount() {
+    this.loadStateFromSessionStorage();
   }
 }
 
