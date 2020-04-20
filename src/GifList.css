@@ -1,0 +1,11 @@
+.gif-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+}
+
+.list-element {
+  flex-grow: 1;
+  margin: 10px;
+}

@@ -1,0 +1,28 @@
+.search-bar-flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  height: 40px;
+  width: auto;
+  border-radius: 5px;
+  border: 1px solid #b0a8b9;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  flex-grow: 2;
+}
+
+.trendingButton {
+  background-color: #ff6363;
+}
+
+.searchButton {
+}
+
+.clearButton {
+  background-color: #49548a;
+  color: white;
+}
