@@ -20,7 +20,7 @@ class GifElement extends React.Component {
       }, 1000);
     };
     return (
-      <div className="list-element">
+      <div className="list-element flex">
         <img
           src={this.props.url}
           frameBorder="0"
@@ -32,7 +32,7 @@ class GifElement extends React.Component {
           ref={this.imgRef}
           loading="lazy"
         ></img>
-        <div className="element-buttons">
+        <div className="element-buttons flex">
           <button className="btn" onClick={deleteClicked}>
             Delete
           </button>

@@ -6,6 +6,16 @@
   opacity: 0%;
 }
 
+.list-element {
+  background-color: #49548a50;
+  border-radius: 5px;
+  padding: 15px;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .list-element:hover > .element-buttons {
   animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
