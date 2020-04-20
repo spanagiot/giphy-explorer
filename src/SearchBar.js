@@ -32,6 +32,7 @@ class SearchBar extends React.Component {
             ref={(input) => (this.searchBarValue = input)}
             className="searchInput"
             placeholder="Search for GIFs"
+            defaultValue={this.props.searchTerm}
           />
           <button className="btn clearButton" onClick={clearClicked}>
             Clear
