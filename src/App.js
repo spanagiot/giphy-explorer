@@ -115,7 +115,7 @@ class App extends React.Component {
             onFetchTrending={fetchTrending}
             onClear={clear}
           ></SearchBar>
-          <div style={{ marginTop: '10px' }}>Powered By GIPHY</div>
+          <div className="mt-10">Powered By GIPHY</div>
           <div className="flex-item">
             <GifList data={this.state.gifList}></GifList>
           </div>

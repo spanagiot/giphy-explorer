@@ -24,6 +24,10 @@
   padding-top: 10px;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 .btn {
   border: none;
   border-radius: 5px;
