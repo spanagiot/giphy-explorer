@@ -110,6 +110,20 @@ class App extends React.Component {
         this.fetch
       );
     };
+
+    const deleteClicked = (key) => {
+      // Create new list reference
+      const newGIFList = [...this.state.gifList];
+
+      // Remove element according to id
+      newGIFList.splice(
+        this.state.gifList.findIndex((x) => x.id === key),
+        1
+      );
+
+      // Feed the new list to state
+      this.setState({ gifList: newGIFList });
+    };
     return (
       <div className="App ">
         <div className="flex-container center">
@@ -120,7 +134,10 @@ class App extends React.Component {
           ></SearchBar>
           <div className="mt-10">Powered By GIPHY</div>
           <div className="flex-item">
-            <GifList data={this.state.gifList}></GifList>
+            <GifList
+              data={this.state.gifList}
+              onDeleteClicked={deleteClicked}
+            ></GifList>
           </div>
           <div className="flex-item">
             <Paginator
