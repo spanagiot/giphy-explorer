@@ -74,6 +74,7 @@ class App extends React.Component {
           gifList: [],
           page: 0,
           GIFtotalCount: 0,
+          searchTerm: '',
         },
         this.fetch
       );
