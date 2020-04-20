@@ -13,11 +13,16 @@ class GifElement extends React.Component {
       this.props.onDeleteClicked(this.props.id);
     };
     const copyToClipboard = () => {
-      navigator.clipboard.writeText(this.props.url);
-      this.copyButtonRef.current.innerText = 'Link copied!';
-      setTimeout(() => {
-        this.copyButtonRef.current.innerText = 'Copy';
-      }, 1000);
+      try {
+        navigator.clipboard.writeText(this.props.url);
+        this.copyButtonRef.current.innerText = 'Link copied!';
+        setTimeout(() => {
+          this.copyButtonRef.current.innerText = 'Copy';
+        }, 1000);
+      } catch (err) {
+        // this code doesn't work on iOS safari
+        // so we will just ignore it for now
+      }
     };
     return (
       <div className="list-element flex">
