@@ -88,6 +88,7 @@ class App extends React.Component {
           trending: false,
           search: false,
           GIFtotalCount: 0,
+          searchTerm: '',
         },
         this.storeStateInSessionStorage
       );
