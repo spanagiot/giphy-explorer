@@ -42,6 +42,9 @@ class App extends React.Component {
           gifList: currentList,
           GIFtotalCount: x.pagination.total_count,
         });
+      })
+      .catch((x) => {
+        alert('Error occured');
       });
   };
 
