@@ -139,7 +139,10 @@ class App extends React.Component {
             searchTerm={this.state.searchTerm}
           ></SearchBar>
           <div className="mt-10">
-            <img src="/giphy-explorer/giphy.gif" style={{ width: '25%' }}></img>
+            <img
+              src="/giphy-explorer/giphy.gif"
+              style={{ width: '33.36%' }}
+            ></img>
           </div>
           <div className="flex-item">
             <GifList
