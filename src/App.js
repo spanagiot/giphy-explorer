@@ -140,7 +140,7 @@ class App extends React.Component {
           ></SearchBar>
           <div className="mt-10">
             <img
-              src="/giphy-explorer/giphy.gif"
+              src="/giphy-explorer/img/giphy.gif"
               style={{ width: '33.36%' }}
             ></img>
           </div>
