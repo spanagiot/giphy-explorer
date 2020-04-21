@@ -138,7 +138,9 @@ class App extends React.Component {
             onClear={clear}
             searchTerm={this.state.searchTerm}
           ></SearchBar>
-          <div className="mt-10">Powered By GIPHY</div>
+          <div className="mt-10">
+            <img src="/giphy-explorer/giphy.gif" style={{ width: '25%' }}></img>
+          </div>
           <div className="flex-item">
             <GifList
               data={this.state.gifList}
