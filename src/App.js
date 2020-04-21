@@ -112,7 +112,7 @@ class App extends React.Component {
           page: previousPage,
           gifList: [],
         },
-        this.fetch()
+        this.fetch
       );
     };
 
