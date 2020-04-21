@@ -8,6 +8,9 @@ Demo can be found [here](https://spanagiot.github.io/giphy-explorer/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+*The code in this repository uses the public GIPHY key for demonstration purposes only. If you want to host your version, you should get your own key from [here](https://developers.giphy.com/)* 
+
 ## Features
 
 - [x] Search for GIFs
